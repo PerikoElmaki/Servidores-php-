@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+    <!-- DIbujo -->
+        <fieldset>
+            <input type="text" id="num" name="num" placeholder="Introduce número del 1 al 9">
+            <br>
+            <input type="submit" value="Enviar">
+            <br>
+        </fieldset>
+    </form>
+
+    <?php
+    // Primero compruebe si no es null 
+    $num = $_POST['num'];
+    if(isset($_POST['num'])){
+        if(!is_numeric($_POST['num'])){
+            echo 'No es un número';
+        }else{
+        // Si es un número, imprime una tabla en el text area
+            for($i=1; $i<=10; $i++){
+                echo $num.' x '.$i.' = '.$num*$i.'<br>';
+            }
+        }
+    }
+        
+    ?>
+</body>
+</html>

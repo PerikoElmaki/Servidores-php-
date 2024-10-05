@@ -14,7 +14,7 @@
 	!empty($_POST['num1']) && !empty($_POST['num2'])) {
 		$num1=$_POST['num1']; //despues de comprobar se guarda el valor de las variables
 		$num2=$_POST['num2'];
-		$sms=$num1+$num2;
+		$sms=$num1+$num2;					
 	}
 	?>
 	<!-- Método post es el que usamos, para que no se vea en url el nombre y datos de variables -->
