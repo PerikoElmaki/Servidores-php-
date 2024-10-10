@@ -1,13 +1,12 @@
 <html>
-
 <head>
     <title>Altas de Productos</title>
-    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body>
+    <h1 class="altasTitle"> Altas de Productos </h1>
     <form action="altas.php" method="post" enctype="multipart/form-data">
-        <h1 class="altasTitle"> Altas de Productos </h1>
         <div class="primeraColum">
             <label for="codigo">Codigo</label>
             <input type="text" name="codigo" required />
@@ -15,10 +14,10 @@
             <input type="text" name="producto" required />
             <label for="detalle">Detalle</label>
             <input type="text" name="detalle" required />
-            <label for="precio">Precio</label>
         </div class="segundaColum">
-
+        
         <div class="segundaColum">
+            <label for="precio">Precio</label>
             <input type="text" name="precio" required />
             <label for="descuento">Descuento</label>
             <input type="text" name="descuento" required />
@@ -34,7 +33,7 @@
     </form>
 
     <div class="abajo">
-        <button  id="menu" class="botones">Volver al menu</button>
+        <a href="menu.php" id="menu" class="botones">Volver al menu</a>
     </div>
 </body>
 

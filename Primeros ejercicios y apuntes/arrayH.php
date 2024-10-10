@@ -7,7 +7,10 @@
                          "Chewbacca",
                          "Lando Calrissian",
                          "Obi-Wan Kenobi");
-        $num=1;
-        for($x=0 ; x <= array.lengt)
+        
+        foreach($estarguar as $indice => $personaje){
+            echo $indice." ".$personaje."<br>";
+            
+        }
     ?>
 </html>

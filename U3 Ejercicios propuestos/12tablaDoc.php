@@ -27,14 +27,14 @@
         $num = $_POST['num'];
         // Abrir ela rchivo para escribir en el 
 
-        $archivo = fopen("numeros.txt", "a"); //w de write  a, para agregar más 
+        $archivo = fopen("numeros.txt", "a"); //w de write,  a para agregar más 
         fputs($archivo, "TABLA DEL " . $num . PHP_EOL);
         for ($i = 1; $i <= 10; $i++) {
             echo $num . ' x ' . $i . ' = ' . $num * $i . '<br>';
             //PHP_EOL es el caracter de salto de linea en archivos 
             fputs($archivo, $num . ' x ' . $i . ' = ' . $num * $i . PHP_EOL);
         }
-
+        // SIEMPRE CERRAR
         fclose($archivo);
     }
     ?>

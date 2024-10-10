@@ -1,0 +1,46 @@
+*{
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    
+}
+
+.altasTitle{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+form{
+    padding: 10%;
+    background-color: grey;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+
+
+/* Alinear primera columna a la izquierda */
+.primeraColum{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+}
+
+/* Alinear segunda columna a la derecha */
+.segundaColum{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+}
+
+.botones{
+    /* Centrar los botones en medio de las columnas */
+    display: flex;
+    grid-column: span 2;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
