@@ -31,6 +31,7 @@ echo mysqli_error($conn);
 <?php   
 //recorremos la tabla productos y mostramos los datos
 while($fila = mysqli_fetch_array($resultado)){
+    $cod= $fila['codigo'];
     echo "<tr>";
     echo "<td>".$fila['codigo']."</td>";
     echo "<td>".$fila['producto']."</td>";
@@ -38,6 +39,11 @@ while($fila = mysqli_fetch_array($resultado)){
     echo "<td>".$fila['precio']."</td>";
     echo "<td>".$fila['descuento']."</td>";        
     echo "<td><img src=\"".$fila['imagen']."\" alt=\"".$fila['codigo']."\" /></td>";
+    // para que genere un enlace a la pagina de modificacion de productos guardándose el código del producto
+    // ?variable forma de llevarte información a la página enlazada
+    echo "<a href=modificar.php?codigo=$cod> Modificar</a>";
+    // otro enlace para borrar 
+    echo "<a href=borrar.php?codigo=$cod> Modificar</a>";
     echo "</tr>";
 }
 ?>
