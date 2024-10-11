@@ -16,40 +16,29 @@ echo mysqli_error($conn);
 
 <body>
     <h1 class="listadoTitle"> Listado de Productos </h1>
-    <table class="listado">
-        <thead>
-            <tr>
-                <th>Codigo</th>
-                <th>Producto</th>
-                <th>Detalle</th>
-                <th>Precio</th>
-                <th>Descuento</th>
-                <th>Imagen</th>
-            </tr>
-        </thead>
-        <tbody>
+    
 <?php   
 //recorremos la tabla productos y mostramos los datos
 while($fila = mysqli_fetch_array($resultado)){
     $cod= $fila['codigo'];
-    echo "<tr>";
-    echo "<td>".$fila['codigo']."</td>";
-    echo "<td>".$fila['producto']."</td>";
-    echo "<td>".$fila['detalle']."</td>";
-    echo "<td>".$fila['precio']."</td>";
-    echo "<td>".$fila['descuento']."</td>";        
-    echo "<td><img src=\"".$fila['imagen']."\" alt=\"".$fila['codigo']."\" /></td>";
+    echo $fila['codigo']. "<br>";
+    echo $fila['producto'] . "<br>";
+    echo $fila['detalle'] . "<br>";
+    echo $fila['precio'] . "$". "<br>";
+    echo $fila['descuento'] . "% dto". "<br>";
+    echo "<img src=images/". $fila['imagen']. " width=100px height=100px>";
+    echo "<br>";
+
     // para que genere un enlace a la pagina de modificacion de productos guardándose el código del producto
-    // ?variable forma de llevarte información a la página enlazada
-    echo "<a href=modificar.php?codigo=$cod> Modificar</a>";
-    // otro enlace para borrar 
-    echo "<a href=borrar.php?codigo=$cod> Modificar</a>";
-    echo "</tr>";
+    echo "<a href=./form/modificarForm.php?codigo=$cod> Modificar</a>";
+    echo "<br>";
+    // para que genere un enlace a la pagina de eliminación de productos guardándose el código del producto
+    echo "<a href=eliminar.php?codigo=$cod> Eliminar</a>";
+    echo "<br>";
+    echo "<br>";
+
 }
 ?>
-        </tbody>
-    </table>
-
     <div class="abajo">
         <a href="menu.php" id="menu" class="botones">Volver al menu</a>
     </div>

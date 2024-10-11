@@ -6,7 +6,7 @@
 
 <body>
     <h1 class="altasTitle"> Altas de Productos </h1>
-    <form action="altas.php" method="post" enctype="multipart/form-data">
+    <form action="../altas.php" method="get" enctype="multipart/form-data">
         <div class="primeraColum">
             <label for="codigo">Codigo</label>
             <input type="text" name="codigo" required />
@@ -33,7 +33,7 @@
     </form>
 
     <div class="abajo">
-        <a href="menu.php" id="menu" class="botones">Volver al menu</a>
+        <a href="../menu.php" id="menu" class="botones">Volver al menu</a>
     </div>
 </body>
 
