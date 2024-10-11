@@ -15,9 +15,10 @@ VALUES ('$cod','$prod','$detail','$precio','$dto','$imag')";
 //ejecutamos la sentencia SQL, atributos conn en conexion.php 
 mysqli_query($conn,$consulta);
 //copiamos la imagen que nos ha llegado a su carpeta.
-echo mysqli_error($conn );
-$ruta=$ima;
+echo mysqli_error($conn);
+$ruta=$imag;
 COPY($_FILES["imagen"]["tmp_name"],$ruta);
 //redireccionamos a la web listados (este fichero lo debeis de crar vosotros)
+echo "Producto añadido exitosamente";
 header ("LOCATION:listado.php");
 ?>
