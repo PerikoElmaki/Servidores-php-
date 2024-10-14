@@ -1,29 +1,20 @@
 <?php
-    include ("conexion.php");
-    $cod=$_GET['codigo'];
-   
-    // $detail=$_GET['detalle'];
-    // $precio=$_GET['precio'];
-    // $dto=$_GET['descuento'];
-    // $imag="images/". $cod. ".jpg";
-    
-    //Comprobamos que las variables no sean vacias
-    if(!isset($cod)){
-        echo "El código del producto no puede ser vacío";
-    }else{
-        //comprobamos las variables una a una 
-        if(isset($_GET['producto'])){
-            echo"prod";
-            //modificamos la sentencia SQL
-            $prod=$_GET['producto'];
-            $consulta = "UPDATE productos SET producto='$prod' WHERE codigo='$cod'";
-            echo "Producto modificado exitosamente";
-        }
-        
-    }
-    
-    mysqli_query($conn, $consulta);
-   
-    echo mysqli_error($conn);
-    // header ("Location:listado.php");
+//Estableciendo la conexión
+include("conexion.php");
+//recogida de datos
+$cod = $_GET['codigo'];
+$pro = $_GET['producto'];
+$det = $_GET['detalle'];
+$pre = $_GET['precio'];
+$des = $_GET['descuento'];
+$consulta = "UPDATE productos SET producto='$pro',detalle='$det',precio='$pre',descuento='$des' WHERE codigo='$cod'";
+echo $consulta;
+//ejecutamos la sentencia SQL
+mysqli_query($conn, $consulta);
+//copiamos la imagen que nos ha llegdi a su carpeta.
+echo mysqli_error($conn);
+
+//redireccionamos a la web listados
+header("LOCATION:listado.php");
+
 ?>

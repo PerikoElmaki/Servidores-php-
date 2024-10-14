@@ -9,7 +9,7 @@
     <form action="../altas.php" method="post" enctype="multipart/form-data">
         <div class="primeraColum">
             <label for="codigo">Codigo</label>
-            <input type="text" name="codigo" required />
+            <input type="text" name="codigo" required  />
             <label for="producto">Producto</label>
             <input type="text" name="producto" required />
             <label for="detalle">Detalle</label>
