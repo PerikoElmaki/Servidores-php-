@@ -15,6 +15,7 @@ mysqli_query($conn, $consulta);
 //copiamos la imagen que nos ha llegado a su carpeta.
 echo mysqli_error($conn);
 $ruta = $ima;
+// si tienes imagenes 
 COPY($_FILES["imagen"]["tmp_name"], $ruta);
 //redireccionamos a la web listados (este fichero lo debeis de crar vosotros)
 header("LOCATION:listado.php");
