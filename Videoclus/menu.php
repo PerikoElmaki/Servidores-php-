@@ -24,10 +24,10 @@
         }
 
         .principal {
-            align-content: center;
-            align-items: center;
+            display: flex;
+            flex-direction: row;
             justify-content: center;
-            background-color: grey;
+            background-color: white;
         }
     </style>
 </head>
@@ -38,10 +38,7 @@
     </nav>
 
     <div class="principal">
-        <!-- alquilar que te lleve al listado de peliculas y los ejemplares, con un botçon para alquilar -->
-        <h2><a href="#">Alquilar películas</a></h2>
-        <!-- Devolver q haga un select de tus peliculas alquiladas, y boton para devolver -->
-        <h2><a href="#">DEvolver</a></h2>
+       <?php include 'listar.php'; ?>
     </div>
 </body>
 
