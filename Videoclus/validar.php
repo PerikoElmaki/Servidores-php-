@@ -17,8 +17,7 @@ if (mysqli_num_rows($resultado) == 1) {
 
 session_start();
 $fila = mysqli_fetch_array($resultado);
-$id = $fila['id'];
-$_SESSION['id'] = $id;
+$_SESSION['id'] = $fila['id'];
 
 
 

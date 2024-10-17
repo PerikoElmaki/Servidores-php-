@@ -38,7 +38,14 @@
     </nav>
 
     <div class="principal">
-       <?php include 'listar.php'; ?>
+       <?php include 'listar.php'; 
+       session_start();
+       if (isset($_SESSION['id'])) {
+           echo "<h2>Bienvenido ".$_SESSION['id']."</h2>";
+          
+       }
+       ?>
+    
     </div>
 </body>
 
