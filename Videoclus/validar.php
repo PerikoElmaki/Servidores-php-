@@ -15,9 +15,12 @@ if (mysqli_num_rows($resultado) == 1) {
     echo "<a href='inicioSesion.php'>Volver al inicio</a>";
 }
 
+
 session_start();
 $fila = mysqli_fetch_array($resultado);
 $_SESSION['id'] = $fila['id'];
+$_SESSION['clave'] = $fila['clave'];
+$_SESSION['nombre'] = $fila['nombre'];
 
 
 

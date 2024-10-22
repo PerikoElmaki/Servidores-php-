@@ -37,7 +37,7 @@
         <?php
         session_start();
         if (isset($_SESSION['id'])) {
-            echo "<h1>Bienvenido " . $_SESSION['nombre'] . "</h2>";
+            echo "<h1>Peliculas alquiladas de " . $_SESSION['nombre'] . "</h2>";
         }
         ?>
     </nav>
@@ -45,8 +45,8 @@
         <h2><a href="mispelis.php">Mis películas</a></h2>
     </div>
     <div class="principal">
-       <?php include 'listar.php';  ?>
-    
+        <?php include 'listarAlquiladas.php';  ?>
+
     </div>
 </body>
 
