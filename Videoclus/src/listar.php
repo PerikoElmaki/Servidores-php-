@@ -13,8 +13,13 @@
         echo "<div class='contenedor'>";
         echo "<h1>$titulo</h1>";
         echo "<p>$desc</p>";
-        echo "<p>Ejemplares: $ejemplares</p>"; 
-        echo "<a href='alquilar.php?idpeli=$id&peli=$titulo&'>Alquilar</a>";
+        echo "<p>Ejemplares: $ejemplares</p>";
+        if ($ejemplares <= 0) {
+            echo "<h3>No disponible</h3>";
+        } else {
+            echo "<a href='src/alquilar.php?idpeli=$id&peli=$titulo&ejemp=$ejemplares'>Alquilar</a>";
+        }
+        
     }
 
 

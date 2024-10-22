@@ -52,7 +52,7 @@
         <h2>Peliculas robadas</h2>
     </nav>
     <div class="form">
-        <form action="validar.php" method="post">
+        <form action="src/validar.php" method="post">
             <div class="usu">
                 <label for="usuario">Usuario:</label>
                 <input type="text" name="usuario" id="usuario" required>

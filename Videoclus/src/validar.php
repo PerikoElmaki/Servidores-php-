@@ -9,7 +9,7 @@ $resultado = mysqli_query($conn, $consulta);
 
 if (mysqli_num_rows($resultado) == 1) {
     echo "Usuario y clave correctos";
-    header("LOCATION:menu.php");
+    header("LOCATION:../menu.php");
 }else {
     echo "ERROR en el usuario $usuario o contraseña son incorrectos<br>";
     echo "<a href='inicioSesion.php'>Volver al inicio</a>";

@@ -36,16 +36,17 @@
     <nav>
         <?php
         session_start();
+        $usu = $_SESSION['id'];
         if (isset($_SESSION['id'])) {
             echo "<h1>Peliculas alquiladas de " . $_SESSION['nombre'] . "</h2>";
         }
         ?>
     </nav>
     <div>
-        <h2><a href="mispelis.php">Mis películas</a></h2>
+        <h2><a href="menu.php">Volver al menú</a></h2>
     </div>
     <div class="principal">
-        <?php include 'listarAlquiladas.php';  ?>
+        <?php include 'src/listarAlquiladas.php';  ?>
 
     </div>
 </body>

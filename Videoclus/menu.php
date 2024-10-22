@@ -45,7 +45,7 @@
         <h2><a href="mispelis.php">Mis películas</a></h2>
     </div>
     <div class="principal">
-       <?php include 'listar.php';  ?>
+       <?php include 'src/listar.php';  ?>
     
     </div>
 </body>
