@@ -1,7 +1,7 @@
 <?php
-//Estableciendo la conexión
+
 include("conexion.php");
-//recogida de datos
+
 $cod = $_POST['codigo'];
 $pro = $_POST['producto'];
 $det = $_POST['detalle'];
@@ -10,9 +10,9 @@ $des = $_POST['descuento'];
 $ima = $cod . ".jpg";
 $consulta = "INSERT INTO productos (codigo,producto,detalle,precio,descuento,imagen) 
 VALUES ('$cod','$pro','$det','$pre','$des','$ima')";
-//ejecutamos la sentencia SQL
+
 mysqli_query($conn, $consulta);
-//copiamos la imagen que nos ha llegado a su carpeta.
+
 echo mysqli_error($conn);
 $ruta = $ima;
 // si tienes imagenes 
